@@ -7,7 +7,7 @@ apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv CF8E292A
 sudo apt-get update
 sudo iptables -A INPUT -p udp -m udp --sport 9700 --dport 1025:65355 -j ACCEPT
 sudo iptables -A INPUT -p tcp -m tcp --sport 9700 --dport 1025:65355 -j ACCEPT
-sudo apt-get install python-software-properties pritunl mongodb-org -y
+sudo apt-get --assume-yes install pritunl mongodb-org
 sudo service pritunl start
 sudo apt-get install squid3
 cd /etc/squid3
